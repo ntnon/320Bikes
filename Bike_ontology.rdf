@@ -21,6 +21,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#at_location -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#at_location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_bike -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_bike">
@@ -139,42 +147,15 @@
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Address -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Address">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Available_Vehicle -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Available_Vehicle">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle_Type"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company"/>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company_Name -->
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company_Name">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Latitude -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Latitude">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub"/>
     
 
 
@@ -184,58 +165,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location_Name -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location_Name">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Lon_and_Lat -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Lon_and_Lat">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Longitude -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Longitude">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Number_of_Available_Vehicles -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Number_of_Available_Vehicles">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Number_of_Vehicles -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Number_of_Vehicles">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle"/>
-    
-
-
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle_Type -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle_Type">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle"/>
-    </owl:Class>
     
 
 
@@ -250,28 +182,9 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Address"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Latitude"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location_Name"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Lon_and_Lat"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Longitude"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Number_of_Available_Vehicles"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company_Name"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Number_of_Vehicles"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle_Type"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
