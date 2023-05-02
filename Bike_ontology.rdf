@@ -13,6 +13,124 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_bike -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_bike">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_hub -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_hub">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_location -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_location">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#owned_by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#owned_by">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#owns -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#owns">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#address">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#available_vehicles -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#available_vehicles">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#is_available -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#is_available">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#latitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#latitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#longitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#longitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#number_of_vehicles -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#number_of_vehicles">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
