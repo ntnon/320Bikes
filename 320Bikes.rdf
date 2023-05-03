@@ -7,7 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes">
-        <owl:imports rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes"/>
+        <owl:imports rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes"/>
     </owl:Ontology>
     
 
@@ -23,62 +23,62 @@
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#at_location -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#at_location -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#at_location">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_location"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#at_location">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#has_location"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Hub"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Location"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_bike -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#has_bike -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_bike">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#has_bike">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Hub"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Vehicle"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_hub -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#has_hub -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_hub">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#has_hub">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Location"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Hub"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_location -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#has_location -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#has_location">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#has_location">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Hub"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Location"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#owned_by -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#owned_by -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#owned_by">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#owns"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#owned_by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#owns"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Hub"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Company"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#owns -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#owns -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#owns">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#owns">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Company"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Hub"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Vehicle"/>
     </rdf:Description>
     
 
@@ -94,64 +94,64 @@
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#address -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#address -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#address">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Hub"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#available_vehicles -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#available_vehicles -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#available_vehicles">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#available_vehicles">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Hub"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#is_available -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#is_available -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#is_available">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Vehicle"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#is_available">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Vehicle"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#latitude -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#latitude -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#latitude">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#latitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Location"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#longitude -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#longitude -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#longitude">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Location"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#longitude">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Location"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#name -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#name -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#name">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Company"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Company"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Description>
     
 
 
-    <!-- http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#number_of_vehicles -->
+    <!-- http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#number_of_vehicles -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#number_of_vehicles">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/anton/ontologies/2023/4/320Bikes#Hub"/>
+    <rdf:Description rdf:about="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#number_of_vehicles">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/vho036/ontologies/2023/4/320Bikes#Hub"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
     </rdf:Description>
 </rdf:RDF>
