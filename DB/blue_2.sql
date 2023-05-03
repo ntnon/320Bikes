@@ -1,7 +1,7 @@
 CREATE TABLE blue_2(
    last_seen       VARCHAR(25) NOT NULL PRIMARY KEY
   ,id              INTEGER  NOT NULL
-  ,name            VARCHAR(21) NOT NULL
+  ,name            VARCHAR(50) NOT NULL
   ,bikes_in_use    INTEGER  NOT NULL
   ,bikes_available INTEGER  NOT NULL
   ,longitude       NUMERIC(14,12) NOT NULL

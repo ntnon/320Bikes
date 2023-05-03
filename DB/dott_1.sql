@@ -1,10 +1,10 @@
 CREATE TABLE dott_1(
-   is_virtual_station BIT  NOT NULL PRIMARY KEY
+   is_virtual_station BIT  NOT NULL 
   ,lat                NUMERIC(11,8) NOT NULL
   ,lon                NUMERIC(11,9) NOT NULL
   ,name               VARCHAR(72) NOT NULL
   ,region_id          VARCHAR(36) NOT NULL
-  ,station_id         VARCHAR(36) NOT NULL
+  ,station_id         VARCHAR(36) NOT NULL PRIMARY KEY
   ,vehicle_capacity   VARCHAR(40) NOT NULL
   ,loc                VARCHAR(24) NOT NULL
 );
