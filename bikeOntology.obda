@@ -7,12 +7,8 @@ xsd:		http://www.w3.org/2001/XMLSchema#
 rdfs:		http://www.w3.org/2000/01/rdf-schema#
 
 [MappingDeclaration] @collection [[
-mappingId	baqme mapping
-target		:ghentbikes/baqme/{station_id} a :Hub . 
-source		select * from ghentbikes.baqme1
-
-mappingId	data overview
-target		:ghentbikes/dataoverview/{company_name} a :Company ; :owns :ghentbikes/baqme1/{station_id} , :ghentbikes/baqme2/{station_id} . 
-source		select * from ghentbikes.dataoverview, ghentbikes.baqme1, ghentbikes.donkey1
+mappingId	MAPID-1ecffe367bfe4d2f9e27f1fd194320e2
+target		:ghentbikes/blue1/{id} a :Hub ; :hasAddress {name} . 
+source		select * from ghentbikes.blue1
 ]]
 
