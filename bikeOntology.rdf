@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/anton/ontologies/2023/4/untitled-ontology-9/"
+     xml:base="http://www.semanticweb.org/anton/ontologies/2023/4/untitled-ontology-9/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.example.org/bikeOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/bikeOntology#atLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/bikeOntology#atLocation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/bikeOntology#has">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#ownedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/bikeOntology#ownedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#owns -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/bikeOntology#owns">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/bikeOntology#hasAddress -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#hasAddress">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#hasLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#hasLatitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#hasLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#hasLongitude">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#maxCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#maxCapacity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.example.org/bikeOntology#bike -->
+
+    <owl:Class rdf:about="http://www.example.org/bikeOntology#bike">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/bikeOntology#vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#company -->
+
+    <owl:Class rdf:about="http://www.example.org/bikeOntology#company"/>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#electricBike -->
+
+    <owl:Class rdf:about="http://www.example.org/bikeOntology#electricBike">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/bikeOntology#vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#electricCargoBike -->
+
+    <owl:Class rdf:about="http://www.example.org/bikeOntology#electricCargoBike">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/bikeOntology#vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#electricScooter -->
+
+    <owl:Class rdf:about="http://www.example.org/bikeOntology#electricScooter">
+        <rdfs:subClassOf rdf:resource="http://www.example.org/bikeOntology#vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#hub -->
+
+    <owl:Class rdf:about="http://www.example.org/bikeOntology#hub"/>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#location -->
+
+    <owl:Class rdf:about="http://www.example.org/bikeOntology#location"/>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#vehicle -->
+
+    <owl:Class rdf:about="http://www.example.org/bikeOntology#vehicle"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/bikeOntology#bike"/>
+            <rdf:Description rdf:about="http://www.example.org/bikeOntology#electricBike"/>
+            <rdf:Description rdf:about="http://www.example.org/bikeOntology#electricCargoBike"/>
+            <rdf:Description rdf:about="http://www.example.org/bikeOntology#electricScooter"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.example.org/bikeOntology#company"/>
+            <rdf:Description rdf:about="http://www.example.org/bikeOntology#hub"/>
+            <rdf:Description rdf:about="http://www.example.org/bikeOntology#location"/>
+            <rdf:Description rdf:about="http://www.example.org/bikeOntology#vehicle"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.24.2023-01-14T21:28:32Z) https://github.com/owlcs/owlapi -->
+
