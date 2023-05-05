@@ -7,8 +7,12 @@ xsd:		http://www.w3.org/2001/XMLSchema#
 rdfs:		http://www.w3.org/2000/01/rdf-schema#
 
 [MappingDeclaration] @collection [[
-mappingId	MAPID-1ecffe367bfe4d2f9e27f1fd194320e2
-target		:ghentbikes/blue1/{id} a :Hub ; :hasAddress {name} . 
-source		select * from ghentbikes.blue1
+mappingId	blue1 mapping
+target		:ghentbikes/blue1/{id} a :Hub ; :hasAddress {name} ; :hasLatitude {latitude} ; :hasLongitude {longitude} ; :ownedBy {company_name} . 
+source		select * from ghentbikes.blue1, ghentbikes.dataoverview where short_name = 'blue_1'
+
+mappingId	blue2 mapping
+target		:ghentbikes/blue2/{id} a :Hub . 
+source		select * from ghentbikes.blue2
 ]]
 
