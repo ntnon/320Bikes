@@ -1,0 +1,18 @@
+[PrefixDeclaration]
+:		http://www.example.org/bikeOntology#
+owl:		http://www.w3.org/2002/07/owl#
+rdf:		http://www.w3.org/1999/02/22-rdf-syntax-ns#
+xml:		http://www.w3.org/XML/1998/namespace
+xsd:		http://www.w3.org/2001/XMLSchema#
+rdfs:		http://www.w3.org/2000/01/rdf-schema#
+
+[MappingDeclaration] @collection [[
+mappingId	baqme mapping
+target		:ghentbikes/baqme/{station_id} a :Hub . 
+source		select * from ghentbikes.baqme1
+
+mappingId	data overview
+target		:ghentbikes/dataoverview/{company_name} a :Company ; :owns :ghentbikes/baqme1/{station_id} , :ghentbikes/baqme2/{station_id} . 
+source		select * from ghentbikes.dataoverview, ghentbikes.baqme1, ghentbikes.donkey1
+]]
+
