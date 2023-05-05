@@ -1,7 +1,7 @@
 ﻿full_name;short_name;company_name;source_type;vehicle_type;link
 baqme-deelfietsen-beschikbaarheid-station-gent;baqme_1;Baqme;hub;ElectricCargoBike;https://data.stad.gent/explore/dataset/baqme-deelfietsen-beschikbaarheid-station-gent/table/
 baqme-deelfietsen-stations-locaties-gent;baqme_2;Baqme;hub;ElectricCargoBike;https://data.stad.gent/explore/dataset/baqme-deelfietsen-stations-locaties-gent/table/
-baqme-locaties-vrije-deelfietsen-gent;baqme_3;Baqme;hub;ElectricCargoBike;https://data.stad.gent/explore/dataset/baqme-locaties-vrije-deelfietsen-gent/table/
+baqme-locaties-vrije-deelfietsen-gent;baqme_bikes;Baqme;hub;ElectricCargoBike;https://data.stad.gent/explore/dataset/baqme-locaties-vrije-deelfietsen-gent/table/
 blue-bike-deelfietsen-gent-dampoort;blue_1;Blue Bike;hub;Bike;https://data.stad.gent/explore/dataset/blue-bike-deelfietsen-gent-dampoort/table/
 blue-bike-deelfietsen-gent-sint-pieters-m-hendrikaplein;blue_2;Blue Bike;hub;Bike;https://data.stad.gent/explore/dataset/blue-bike-deelfietsen-gent-sint-pieters-m-hendrikaplein/table/
 blue-bike-deelfietsen-gent-sint-pieters-st-denijslaan;blue_3;Blue Bike;hub;Bike;https://data.stad.gent/explore/dataset/blue-bike-deelfietsen-gent-sint-pieters-st-denijslaan/table/

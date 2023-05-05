@@ -1,0 +1,27 @@
+@prefix : <http://www.example.org/bikeOntology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<urn:MAPID-f8086dfcf95d48f3bf7db4cd55c17e25> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "SELECT * FROM ghentbikes.donkeybikes, ghentbikes.dataoverview where short_name = 'donkey_bikes'"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "company_name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :name
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://www.example.org/bikeOntology#ghentbikes/donkeybikes{station_id}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :owns
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Company;
+      rr:template "http://www.example.org/bikeOntology#ghentbikes/dataoverview{company_name}";
+      rr:termType rr:IRI
+    ] .
