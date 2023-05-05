@@ -1,0 +1,99 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix : <http://www.example.org/bikeOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<urn:baqme_2_hubs> a rr:TriplesMap;
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:predicate :name;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "name";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :ownedBy;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "company_name";
+          rr:termType rr:Literal
+        ]
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from \"320bikes\".baqme_2, \"320bikes\".data_overview where short_name = 'baqme_2'"
+    ];
+  rr:subjectMap [ a rr:TermMap, rr:SubjectMap;
+      rr:template "http://www.example.org/bikeOntology#320bikes/baqme_2{station_id}";
+      rr:termType rr:IRI;
+      rr:class :hub
+    ] .
+
+<urn:baqme_owns_baqme2> a rr:TriplesMap;
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:IRI;
+          rr:template "http://www.example.org/bikeOntology#320bikes/baqme_2{station_id}"
+        ];
+      rr:predicate :owns
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "company_name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :name
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from \"320bikes\".data_overview, \"320bikes\".baqme_2 where short_name = 'baqme_2'"
+    ];
+  rr:subjectMap [ a rr:TermMap, rr:SubjectMap;
+      rr:class :company;
+      rr:termType rr:IRI;
+      rr:template "http://www.example.org/bikeOntology#320bikes/data_overview{company_name}"
+    ] .
+
+<urn:donkeyrepublic_hubs> a rr:TriplesMap;
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "company_name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :ownedBy
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :name
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:termType rr:IRI;
+      rr:template "http://www.example.org/bikeOntology#320bikes/donkey_1{station_id}";
+      rr:class :hub
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from \"320bikes\".donkey_1, \"320bikes\".data_overview  where short_name = 'donkey_1'"
+    ] .
+
+<urn:donkey_owns_donkey1> a rr:TriplesMap;
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "company_name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :name
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:IRI;
+          rr:template "http://www.example.org/bikeOntology#320bikes/donkey_1{station_id}"
+        ];
+      rr:predicate :owns
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from \"320bikes\".data_overview, \"320bikes\".donkey_1 where short_name = 'donkey_1'"
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "http://www.example.org/bikeOntology#320bikes/data_overview{company_name}";
+      rr:termType rr:IRI;
+      rr:class :company
+    ] .
