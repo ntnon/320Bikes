@@ -6,7 +6,56 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<urn:blue1%20mapping> a rr:TriplesMap;
+<urn:blue1mapping> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from ghentbikes.blue1, ghentbikes.dataoverview where short_name = 'blue_1'"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:predicate :ownedBy;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:template "http://www.example.org/bikeOntology#ghentbikes.dataoverview/{company_name}";
+          rr:termType rr:IRI
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "name"
+        ];
+      rr:predicate :hasAddress
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLongitude;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "longitude"
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:Literal;
+          rr:column "latitude"
+        ];
+      rr:predicate :hasLatitude
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :bikesAvailable;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "bikes_available";
+          rr:termType rr:Literal
+        ]
+    ];
+  rr:subjectMap [ a rr:TermMap, rr:SubjectMap;
+      rr:termType rr:IRI;
+      rr:template "http://www.example.org/bikeOntology#ghentbikes/blue1/{id}";
+      rr:class :Hub
+    ] .
+
+<urn:blue2mapping> a rr:TriplesMap;
+  rr:subjectMap [ a rr:TermMap, rr:SubjectMap;
+      rr:termType rr:IRI;
+      rr:template "http://www.example.org/bikeOntology#ghentbikes/blue2/{id}";
+      rr:class :Hub
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from ghentbikes.blue2, ghentbikes.dataoverview where short_name = 'blue_2'"
+    ];
   rr:predicateObjectMap [ a rr:PredicateObjectMap;
       rr:objectMap [ a rr:TermMap, rr:ObjectMap;
           rr:termType rr:Literal;
@@ -16,37 +65,60 @@
     ], [ a rr:PredicateObjectMap;
       rr:objectMap [ a rr:ObjectMap, rr:TermMap;
           rr:termType rr:Literal;
-          rr:column "latitude"
+          rr:column "longitude"
         ];
-      rr:predicate :hasLatitude
+      rr:predicate :hasLongitude
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLatitude;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:Literal;
+          rr:column "latitude"
+        ]
     ], [ a rr:PredicateObjectMap;
       rr:predicate :ownedBy;
       rr:objectMap [ a rr:TermMap, rr:ObjectMap;
-          rr:column "company_name";
-          rr:termType rr:Literal
+          rr:template "http://www.example.org/bikeOntology#ghentbikes.dataoverview/{company_name}";
+          rr:termType rr:IRI
         ]
     ], [ a rr:PredicateObjectMap;
-      rr:predicate :hasLongitude;
-      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
-          rr:column "longitude";
-          rr:termType rr:Literal
-        ]
-    ];
-  rr:subjectMap [ a rr:TermMap, rr:SubjectMap;
-      rr:template "http://www.example.org/bikeOntology#ghentbikes/blue1/{id}";
-      rr:class :Hub;
-      rr:termType rr:IRI
-    ];
-  rr:logicalTable [ a rr:R2RMLView;
-      rr:sqlQuery "select * from ghentbikes.blue1, ghentbikes.dataoverview where short_name = 'blue_1'"
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "bikes_available"
+        ];
+      rr:predicate :bikesAvailable
     ] .
 
-<urn:blue2%20mapping> a rr:TriplesMap;
-  rr:logicalTable [ a rr:R2RMLView;
-      rr:sqlQuery "select * from ghentbikes.blue2"
-    ];
+<urn:blue3mapping> a rr:TriplesMap;
   rr:subjectMap [ a rr:TermMap, rr:SubjectMap;
       rr:termType rr:IRI;
       rr:class :Hub;
-      rr:template "http://www.example.org/bikeOntology#ghentbikes/blue2/{id}"
+      rr:template "http://www.example.org/bikeOntology#ghentbikes/blue3/{id}"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:predicate :ownedBy;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:IRI;
+          rr:template "http://www.example.org/bikeOntology#ghentbikes.dataoverview/{company_name}"
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasAddress
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:Literal;
+          rr:column "longitude"
+        ];
+      rr:predicate :hasLongitude
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLatitude;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "latitude";
+          rr:termType rr:Literal
+        ]
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from ghentbikes.blue1, ghentbikes.dataoverview where short_name = 'blue_3'"
     ] .
