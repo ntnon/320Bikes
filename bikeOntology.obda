@@ -8,16 +8,16 @@ obda:		https://w3id.org/obda/vocabulary#
 rdfs:		http://www.w3.org/2000/01/rdf-schema#
 
 [MappingDeclaration] @collection [[
-mappingId	mapping--1139111225
-target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/donkey2{station_id} . 
-source		SELECT * FROM ghentbikes.donkey2, ghentbikes.dataoverview where short_name = 'donkey2'
+mappingId	companymapping
+target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} . 
+source		SELECT * FROM ghentbikes.dataoverview
 
-mappingId	MAPID-10247daf2d1a41fc8a7be80c5f6811c0
-target		:ghentbikes/donkey2{station_id} a :Hub ; :geopoint {company_name} ; :ownedBy :ghentbikes/dataoverview{short_name} ; :bikesAvailable :ghentbikes/donkey2{num_bikes_available} . 
-source		SELECT * FROM ghentbikes.donkey2, ghentbikes.dataoverview where short_name = 'donkey2'
+mappingId	donkeyhub
+target		:ghentbikes/donkey2{station_id} a :Hub ; :geopoint {company_name} ; :ownedBy :ghentbikes/dataoverview{company_name} ; :fromSource :ghentbikes/dataoverview{short_name} ; :bikesAvailable {num_bikes_available} . 
+source		SELECT * FROM ghentbikes.donkey2, ghentbikes.dataoverview where short_name = 'donkey_2'
 
-mappingId	mapping--1139111225(0)
-target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/donkey2{station_id} . 
-source		SELECT * FROM ghentbikes.donkey2, ghentbikes.dataoverview where short_name = 'donkey2'
+mappingId	datasourcemapping
+target		:ghentbikes/dataoverview{short_name} a :DataSource ; :full_name {full_name} ; :producedBy :ghentbikes/dataoverview{company_name} ; :link {link} . 
+source		SELECT * FROM ghentbikes.dataoverview
 ]]
 

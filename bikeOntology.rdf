@@ -46,6 +46,14 @@
     
 
 
+    <!-- http://www.example.org/bikeOntology#producedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.example.org/bikeOntology#producedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
