@@ -8,105 +8,105 @@ obda:		https://w3id.org/obda/vocabulary#
 rdfs:		http://www.w3.org/2000/01/rdf-schema#
 
 [MappingDeclaration] @collection [[
-mappingId	mapping--48302973
-target		:ghentbikes/dottbikes{bike_id} a :ElectricBike ; :fromSource :ghentbikes/dataoverview/{short_name} ; :hasLatitude {lat} ; :isReserved {is_reserved} ; :ownedBy :ghentbikes/dataoverview/{company_name} ; :hasLongitude {lon} . 
-source		select * 
-			from ghentbikes.dottbikes, ghentbikes.dataoverview 
-			where short_name = 'dott_bikes'
-
-mappingId	mapping--413146039
-target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/dottbikes/{bike_id} . 
+mappingId	mapping-2013052025
+target		:ghentbikes/dataoverview{company_name} a :Company ; :owns :ghentbikes/dottbikes/{bike_id} ; :name {company_name} . 
 source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.dottbikes where short_name = 'dott_bikes'
 
-mappingId	mapping--848016804
-target		:ghentbikes/blue1/{id} a :Hub ; :hasLongitude {longitude} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :bikesAvailable {bikes_available} ; :geopoint {geopoint} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :hasAddress {name} ; :hasLatitude {latitude} . 
-source		select * from ghentbikes.blue1, ghentbikes.dataoverview where short_name = 'blue_1'
-
-mappingId	mapping-1458469703
-target		:ghentbikes/dottbikes{bike_id} a :ElectricBike ; :fromSource :ghentbikes/dataoverview/{short_name} ; :ownedBy :ghentbikes/dataoverview/{company_name} ; :hasLongitude {lon}^^xsd:float ; :hasLatitude {lat}^^xsd:float . 
-source		select * 
-			from ghentbikes.dottbikes, ghentbikes.dataoverview 
-			where short_name = 'dott_bikes'
-
-mappingId	mapping--448128202
-target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/blue2/{id} . 
-source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.blue2 where short_name = 'blue_2'
-
-mappingId	mapping--441852215
-target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/blue1/{id} . 
-source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.blue1 where short_name = 'blue_1'
-
-mappingId	mapping-98237472
-target		:ghentbikes/baqmebikes/{bike_id} a :ElectricCargoBike ; :geopoint {geopoint} ; :hasLatitude {lat} ; :isReserved {is_reserved} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :hasLongitude {lon} . 
-source		select * from ghentbikes.baqmebikes, ghentbikes.dataoverview where short_name = 'baqme_bikes'
-
-mappingId	mapping--1921677181
-target		:ghentbikes/blue2/{id} a :Hub ; :geopoint {geopoint} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :hasLongitude {longitude} ; :bikesAvailable {bikes_available} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :hasLatitude {latitude} ; :hasAddress {name} . 
-source		select * from ghentbikes.blue2, ghentbikes.dataoverview where short_name = 'blue_2'
-
-mappingId	mapping--1173148406
-target		:ghentbikes/dataoverview{company_name} a :Company ; :owns :ghentbikes/baqme2/{station_id} ; :name {company_name} . 
-source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.baqme2 where short_name = 'baqme_2'
-
-mappingId	mapping-1368678126
-target		:ghentbikes/dataoverview{company_name} a :Company ; :owns :ghentbikes/baqme1/{station_id} ; :name {company_name} . 
-source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.baqme1 where short_name = 'baqme_1'
-
-mappingId	mapping--1262951420
-target		:ghentbikes/baqme1/{station_id} a :Hub ; :bikesAvailable {num_bikes_available} ; :geopoint {geopunt} ; :hasAddress {name} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :fromSource :ghentbikes.dataoverview/{short_name} . 
-source		select * from ghentbikes.baqme1, ghentbikes.dataoverview where short_name = 'baqme_1'
-
-mappingId	mapping-1916396879
-target		:ghentbikes/baqme2/{station_id} a :Hub ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :hasLongitude {lon} ; :hasAddress {name} ; :geopoint {geopunt} ; :hasLatitude {lat} ; :fromSource :ghentbikes.dataoverview/{short_name} . 
-source		select * from ghentbikes.baqme2, ghentbikes.dataoverview where short_name = 'baqme_2'
-
-mappingId	mapping-1696900757
-target		:ghentbikes/dott1/{station_id} a :Hub ; :ownedBy :ghentbikes/dataoverview/{company_name} ; :hasLongitude {lon} ; :hasLatitude {lat} ; :fromSource :ghentbikes/dataoverview/{short_name} . 
-source		select * from ghentbikes.dott1, ghentbikes.dataoverview where short_name  = 'dott_1'
-
-mappingId	mapping--17404441
-target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/donkey2/{station_id} . 
-source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.donkey2 where short_name = 'donkey_2'
-
-mappingId	mapping--111629751
-target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/donkey1/{station_id} . 
-source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.donkey1 where short_name = 'donkey_1'
-
-mappingId	mapping-1497296800
-target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/baqmebikes/{bike_id} . 
-source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.baqmebikes where short_name = 'baqme_bikes'
-
-mappingId	mapping--1810399703
-target		:ghentbikes/blue4/{id} a :Hub ; :hasLatitude {latitude} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :hasAddress {name} ; :bikesAvailable {bikes_available} ; :geopoint {geopoint} ; :hasLongitude {longitude} . 
+mappingId	mapping--1517181319
+target		:ghentbikes/blue4/{id} a :Hub ; :hasLatitude {latitude} ; :hasLongitude {longitude} ; :hasAddress {name} ; :geopoint {geopoint} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :bikesAvailable {bikes_available} . 
 source		select * from ghentbikes.blue4, ghentbikes.dataoverview where short_name = 'blue_4'
 
-mappingId	mapping-2045870033
-target		:ghentbikes/blue3/{id} a :Hub ; :hasLatitude {latitude} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :hasAddress {name} ; :bikesAvailable {bikes_available} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :geopoint {geopoint} ; :hasLongitude {longitude} . 
-source		select * from ghentbikes.blue1, ghentbikes.dataoverview where short_name = 'blue_3'
+mappingId	mapping--723696926
+target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/baqme1/{station_id} . 
+source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.baqme1 where short_name = 'baqme_1'
 
-mappingId	mapping--615738511
-target		:ghentbikes/dataoverview{company_name} a :Company ; :owns :ghentbikes/dott1/{station_id} ; :name {company_name} . 
-source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.dott1 where short_name = 'dott_1'
+mappingId	mapping--866823058
+target		:ghentbikes/dott1/{station_id} a :Hub ; :hasLatitude {lat} ; :hasLongitude {lon} ; :fromSource :ghentbikes/dataoverview/{short_name} ; :ownedBy :ghentbikes/dataoverview/{company_name} . 
+source		select * from ghentbikes.dott1, ghentbikes.dataoverview where short_name  = 'dott_1'
 
-mappingId	mapping-1481321834
-target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/blue4/{id} . 
-source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.blue4 where short_name = 'blue_4'
+mappingId	mapping-1820755899
+target		:ghentbikes/dataoverview{company_name} a :Company ; :owns :ghentbikes/blue1/{id} ; :name {company_name} . 
+source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.blue1 where short_name = 'blue_1'
 
-mappingId	mapping-621414907
+mappingId	mapping-1023982592
+target		:ghentbikes/dataoverview{company_name} a :Company ; :owns :ghentbikes/donkey2/{station_id} ; :name {company_name} . 
+source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.donkey2 where short_name = 'donkey_2'
+
+mappingId	mapping--888797165
 target		:ghentbikes/dataoverview{company_name} a :Company ; :owns :ghentbikes/blue3/{id} ; :name {company_name} . 
 source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.blue3 where short_name = 'blue_3'
 
-mappingId	mapping--251266765
-target		:ghentbikes/donkey1/{station_id} a :Hub ; :hasLatitude {lat} ; :hasAddress {name} ; :geopoint {geopunt} ; :ownedBy :ghentbikes/dataoverview/{company_name} ; :hasLongitude {lon} . 
+mappingId	mapping--1399917246
+target		:ghentbikes/dottbikes{bike_id} a :ElectricBike ; :ownedBy :ghentbikes/dataoverview/{company_name} ; :isReserved {is_reserved} ; :hasLongitude {lon} ; :fromSource :ghentbikes/dataoverview/{short_name} ; :hasLatitude {lat} . 
+source		select * 
+			from ghentbikes.dottbikes, ghentbikes.dataoverview 
+			where short_name = 'dott_bikes'
+
+mappingId	mapping-1768931754
+target		:ghentbikes/dataoverview{company_name} a :Company ; :owns :ghentbikes/blue4/{id} ; :name {company_name} . 
+source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.blue4 where short_name = 'blue_4'
+
+mappingId	mapping-1940106491
+target		:ghentbikes/donkey2{station_id} a :Hub ; :fromSource :ghentbikes/dataoverview{short_name} ; :ownedBy :ghentbikes/dataoverview{company_name} ; :geopoint {company_name} ; :bikesAvailable {num_bikes_available} . 
+source		SELECT * FROM ghentbikes.donkey2, ghentbikes.dataoverview where short_name = 'donkey_2'
+
+mappingId	mapping--283120992
+target		:ghentbikes/dottbikes{bike_id} a :ElectricBike ; :ownedBy :ghentbikes/dataoverview/{company_name} ; :fromSource :ghentbikes/dataoverview/{short_name} ; :hasLongitude {lon}^^xsd:float ; :hasLatitude {lat}^^xsd:float . 
+source		select * 
+			from ghentbikes.dottbikes, ghentbikes.dataoverview 
+			where short_name = 'dott_bikes'
+
+mappingId	mapping--1370795207
+target		:ghentbikes/baqme2/{station_id} a :Hub ; :hasLatitude {lat} ; :hasLongitude {lon} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :hasAddress {name} ; :geopoint {geopunt} . 
+source		select * from ghentbikes.baqme2, ghentbikes.dataoverview where short_name = 'baqme_2'
+
+mappingId	mapping-396204812
+target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/donkey1/{station_id} . 
+source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.donkey1 where short_name = 'donkey_1'
+
+mappingId	mapping-161681853
+target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/baqmebikes/{bike_id} . 
+source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.baqmebikes where short_name = 'baqme_bikes'
+
+mappingId	mapping--1604147605
+target		:ghentbikes/baqmebikes/{bike_id} a :ElectricCargoBike ; :isReserved {is_reserved} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :geopoint {geopoint} . 
+source		select * from ghentbikes.baqmebikes, ghentbikes.dataoverview where short_name = 'baqme_bikes'
+
+mappingId	mapping-1228145702
+target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/blue2/{id} . 
+source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.blue2 where short_name = 'blue_2'
+
+mappingId	mapping-1455988698
+target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/dott1/{station_id} . 
+source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.dott1 where short_name = 'dott_1'
+
+mappingId	mapping-22919968
+target		:ghentbikes/blue1/{id} a :Hub ; :hasLongitude {longitude} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :hasAddress {name} ; :hasLatitude {latitude} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :bikesAvailable {bikes_available} ; :geopoint {geopoint} . 
+source		select * from ghentbikes.blue1, ghentbikes.dataoverview where short_name = 'blue_1'
+
+mappingId	mapping-1669805999
+target		:ghentbikes/baqme1/{station_id} a :Hub ; :geopoint {geopunt} ; :hasAddress {name} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :bikesAvailable {num_bikes_available} ; :ownedBy :ghentbikes.dataoverview/{company_name} . 
+source		select * from ghentbikes.baqme1, ghentbikes.dataoverview where short_name = 'baqme_1'
+
+mappingId	mapping--809522605
+target		:ghentbikes/blue3/{id} a :Hub ; :geopoint {geopoint} ; :bikesAvailable {bikes_available} ; :hasLongitude {longitude} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :hasAddress {name} ; :hasLatitude {latitude} . 
+source		select * from ghentbikes.blue1, ghentbikes.dataoverview where short_name = 'blue_3'
+
+mappingId	mapping-1789432432
+target		:ghentbikes/donkey1/{station_id} a :Hub ; :hasAddress {name} ; :hasLatitude {lat} ; :geopoint {geopunt} ; :ownedBy :ghentbikes/dataoverview/{company_name} ; :hasLongitude {lon} . 
 source		select * 
 			from ghentbikes.donkey1, ghentbikes.dataoverview 
 			where short_name = 'donkey_1'
 
-mappingId	MAPID-866d1520588147289952a3da8abf0864
-target		:ghentbikes/donkey2{station_id} a :Hub ; :geopoint {company_name} ; :bikesAvailable {num_bikes_available} ; :fromSource :ghentbikes/dataoverview{short_name} ; :ownedBy :ghentbikes/dataoverview{company_name} . 
-source		SELECT * FROM ghentbikes.donkey2, ghentbikes.dataoverview where short_name = 'donkey_2'
+mappingId	mapping-665610942
+target		:ghentbikes/dataoverview{company_name} a :Company ; :name {company_name} ; :owns :ghentbikes/baqme2/{station_id} . 
+source		SELECT * FROM ghentbikes.dataoverview, ghentbikes.baqme2 where short_name = 'baqme_2'
 
-mappingId	MAPID-7572e7bc530f4988a34fa3b6990e2ace
+mappingId	mapping-1436260692
+target		:ghentbikes/blue2/{id} a :Hub ; :hasLongitude {longitude} ; :ownedBy :ghentbikes.dataoverview/{company_name} ; :fromSource :ghentbikes.dataoverview/{short_name} ; :bikesAvailable {bikes_available} ; :geopoint {geopoint} ; :hasAddress {name} ; :hasLatitude {latitude} . 
+source		select * from ghentbikes.blue2, ghentbikes.dataoverview where short_name = 'blue_2'
+
+mappingId	mapping-23053260
 target		:ghentbikes/dataoverview{short_name} a :DataSource ; :full_name {full_name} ; :link {link} ; :producedBy :ghentbikes/dataoverview{company_name} . 
 source		SELECT * FROM ghentbikes.dataoverview
 ]]
