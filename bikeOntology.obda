@@ -8,6 +8,7 @@ obda:		https://w3id.org/obda/vocabulary#
 rdfs:		http://www.w3.org/2000/01/rdf-schema#
 
 [MappingDeclaration] @collection [[
+<<<<<<< HEAD
 mappingId	mapping-2013052025
 target		:company/{company} a :Company ; :owns :hub/{station_id} ; :name {company} . 
 source		SELECT * FROM baqme_1
@@ -108,6 +109,14 @@ source		select * from ghentbikes.blue2, ghentbikes.dataoverview where short_name
 
 mappingId	mapping-23053260
 target		:ghentbikes/dataoverview{short_name} a :DataSource ; :full_name {full_name} ; :link {link} ; :producedBy :ghentbikes/dataoverview{company_name} . 
+=======
+mappingId	company
+target		:company/{company_name} a :Company ; :name {company_name} . 
+>>>>>>> df8c1b1369452d0be2bcd07ffaa8d92db20b9e98
 source		SELECT * FROM ghentbikes.dataoverview
+
+mappingId	MAPID-d92a1e87278b4e3681b8e979f6d00762
+target		:bike/{bike_id} a :Bike ; :hasLatitude {lat} ; :hasLongitude {lon} . 
+source		SELECT * FROM ghentbikes.dottbikes
 ]]
 
