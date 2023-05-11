@@ -23,10 +23,48 @@ PREFIX : <http://www.example.org/bikeOntology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 
-select ( abs(0 - ?lon) + abs(0 - ?lat) as ?closest) ?lon ?lat
+select ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lon ?lat
 where {
 ?h :hasLongitude ?lon .
 ?h :hasLatitude ?lat .
 }
-order by asc (?closest)
+order by asc (?distance)
+limit 10
+[QueryItem="Closest Vehicle"]
+PREFIX : <http://www.example.org/bikeOntology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+
+select ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon
+where {
+?h :hasLongitude ?lon .
+?h :hasLatitude ?lat .
+?h a ?type .
+filter (?type in (:ElectricCargoBike, :ElectricBike )).
+}
+order by asc (?distance)
+limit 10
+[QueryItem="tempquery"]
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+PREFIX : <http://www.example.org/bikeOntology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+
+select ?h
+where {
+?h a ?type .
+}
+[QueryItem="Closest Hub"]
+PREFIX : <http://www.example.org/bikeOntology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+
+select ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon
+where {
+?h :hasLongitude ?lon .
+?h :hasLatitude ?lat .
+?h :hasAddress ?add .
+}
+order by asc (?distance)
 limit 10

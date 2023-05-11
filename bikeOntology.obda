@@ -45,11 +45,11 @@ target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {loc} ; :hasLa
 source		select * from dott_1
 
 mappingId	baqme_bikes
-target		:ElectricCargoBike/{bike_id} a :ElectricCargoBike ; :geopoint {geopoint} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
+target		:vehicle/{bike_id} a :ElectricCargoBike ; :geopoint {geopoint} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
 source		select * from baqme_bikes
 
 mappingId	dott_bikes
-target		:ElectricBike/{bike_id} a :ElectricBike ; :geopoint {loc} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
+target		:vehicle/{bike_id} a :ElectricBike ; :geopoint {loc} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
 source		select * from dott_bikes
 
 mappingId	baqme_1 company
