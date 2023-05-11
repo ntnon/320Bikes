@@ -9,47 +9,47 @@ rdfs:		http://www.w3.org/2000/01/rdf-schema#
 
 [MappingDeclaration] @collection [[
 mappingId	baqme1
-target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :bikesAvailable {num_bikes_available} ; :ownedBy :company/{company} . 
+target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :hasLongitude {lon}^^xsd:float ; :hasLatitude {lat}^^xsd:float ; :geopoint {geopunt} ; :bikesAvailable {num_bikes_available} ; :ownedBy :company/{company} . 
 source		select * from baqme_1
 
 mappingId	baqme2
-target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :bikesAvailable {capacity} ; :ownedBy :company/{company} . 
+target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :bikesAvailable {capacity} ; :ownedBy :company/{company} . 
 source		select * from baqme_2
 
 mappingId	blue1
-target		:hub/{id} a :Hub ; :hasAddress {name} ; :geopoint {geopoint} ; :hasLatitude {latitude} ; :hasLongitude {longitude} ; :bikesAvailable {bikes_available} ; :ownedBy :company/{company} . 
+target		:hub/{id} a :Hub ; :hasAddress {name} ; :geopoint {geopoint} ; :hasLatitude {latitude}^^xsd:float ; :hasLongitude {longitude}^^xsd:float ; :bikesAvailable {bikes_available} ; :ownedBy :company/{company} . 
 source		select * from blue_1
 
 mappingId	blue2
-target		:hub/{id} a :Hub ; :hasAddress {name} ; :geopoint {geopoint} ; :hasLatitude {latitude} ; :hasLongitude {longitude} ; :bikesAvailable {bikes_available} ; :ownedBy :company/{company} . 
+target		:hub/{id} a :Hub ; :hasAddress {name} ; :geopoint {geopoint} ; :hasLatitude {latitude}^^xsd:float ; :hasLongitude {longitude}^^xsd:float ; :bikesAvailable {bikes_available} ; :ownedBy :company/{company} . 
 source		select * from blue_2
 
 mappingId	blue3
-target		:hub/{id} a :Hub ; :hasAddress {name} ; :geopoint {geopoint} ; :hasLatitude {latitude} ; :hasLongitude {longitude} ; :bikesAvailable {bikes_available} ; :ownedBy :company/{company} . 
+target		:hub/{id} a :Hub ; :hasAddress {name} ; :geopoint {geopoint} ; :hasLatitude {latitude}^^xsd:float ; :hasLongitude {longitude}^^xsd:float ; :bikesAvailable {bikes_available} ; :ownedBy :company/{company} . 
 source		select * from blue_3
 
 mappingId	blue4
-target		:hub/{id} a :Hub ; :hasAddress {name} ; :geopoint {geopoint} ; :hasLatitude {latitude} ; :hasLongitude {longitude} ; :bikesAvailable {bikes_available} ; :ownedBy :company/{company} . 
+target		:hub/{id} a :Hub ; :hasAddress {name} ; :geopoint {geopoint} ; :hasLatitude {latitude}^^xsd:float ; :hasLongitude {longitude}^^xsd:float ; :bikesAvailable {bikes_available} ; :ownedBy :company/{company} . 
 source		select * from blue_4
 
 mappingId	donkey2
-target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :bikesAvailable {num_bikes_available} ; :ownedBy :company/{company} . 
+target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :hasLongitude {lon}^^xsd:float ; :hasLatitude {lat}^^xsd:float ; :bikesAvailable {num_bikes_available} ; :ownedBy :company/{company} . 
 source		select * from donkey_2
 
 mappingId	donkey1
-target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :ownedBy :company/{company} . 
+target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
 source		select * from donkey_1
 
 mappingId	dott1
-target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {loc} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :ownedBy :company/{company} . 
+target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {loc} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
 source		select * from dott_1
 
 mappingId	baqme_bikes
-target		:ElectricCargoBike/{bike_id} a :ElectricCargoBike ; :geopoint {geopoint} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :ownedBy :company/{company} . 
+target		:ElectricCargoBike/{bike_id} a :ElectricCargoBike ; :geopoint {geopoint} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
 source		select * from baqme_bikes
 
 mappingId	dott_bikes
-target		:ElectricBike/{bike_id} a :ElectricBike ; :geopoint {loc} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :ownedBy :company/{company} . 
+target		:ElectricBike/{bike_id} a :ElectricBike ; :geopoint {loc} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
 source		select * from dott_bikes
 
 mappingId	baqme_1 company

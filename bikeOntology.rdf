@@ -102,6 +102,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#hasLatitude">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -110,6 +111,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#hasLongitude">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
