@@ -43,5 +43,13 @@ source		select * from donkey_1
 mappingId	dott1
 target		:hub/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {loc} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :ownedBy {company} . 
 source		select * from dott_1
+
+mappingId	baqme_bikes
+target		:ElectricCargoBike/{bike_id} a :ElectricCargoBike ; :geopoint {geopoint} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :ownedBy {company} . 
+source		select * from baqme_bikes
+
+mappingId	dott_bikes
+target		:ElectricBike/{bike_id} a :ElectricBike ; :geopoint {loc} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :ownedBy {company} . 
+source		select * from dott_bikes
 ]]
 
