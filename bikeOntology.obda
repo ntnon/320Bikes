@@ -37,19 +37,19 @@ target		:hub/donkey_2/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geop
 source		select * from donkey_2
 
 mappingId	donkey1
-target		:hub/donkey_1/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
+target		:hub/donkey_1/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} ; :vehicleType {vehicle_type} . 
 source		select * from donkey_1
 
 mappingId	dott1
-target		:hub/dott_1/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {loc} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
+target		:hub/dott_1/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {loc} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} ; :vehicleType {vehicle_type} . 
 source		select * from dott_1
 
 mappingId	baqme_bikes
-target		:vehicle/baqme_bikes/{bike_id} a :ElectricCargoBike ; :geopoint {geopoint} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
+target		:vehicle/baqme_bikes/{bike_id} a :ElectricCargoBike ; :geopoint {geopoint} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} ; :vehicleType {vehicle_type} . 
 source		select * from baqme_bikes
 
 mappingId	dott_bikes
-target		:vehicle/dott_bikes/{bike_id} a :ElectricBike ; :geopoint {loc} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} . 
+target		:vehicle/dott_bikes/{bike_id} a :ElectricBike ; :geopoint {loc} ; :hasLatitude {lat}^^xsd:float ; :hasLongitude {lon}^^xsd:float ; :ownedBy :company/{company} ; :vehicleType {vehicle_type} . 
 source		select * from dott_bikes
 ]]
 
