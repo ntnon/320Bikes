@@ -248,34 +248,26 @@
     
 
 
-    <!-- http://www.example.org/bikeOntology#company/baqme -->
+    <!-- http://www.example.org/bikeOntology#company/Dott -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/baqme">
-        <name>Baqme</name>
+    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Dott">
+        <name>Dott</name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.org/bikeOntology#company/blue_bike -->
+    <!-- http://www.example.org/bikeOntology#company/Blue%20Bike -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/blue_bike">
+    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Blue%20Bike">
         <name>Blue Bike</name>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://www.example.org/bikeOntology#company/donkey_republic -->
+    <!-- http://www.example.org/bikeOntology#company/Donkey%20Republic -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/donkey_republic">
+    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Donkey%20Republic">
         <name>Donkey Republic</name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.example.org/bikeOntology#company/dott -->
-
-    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/dott">
-        <name>Dott</name>
     </owl:NamedIndividual>
     
 
