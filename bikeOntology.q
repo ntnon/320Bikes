@@ -68,3 +68,12 @@ where {
 ?c :name ?cname .
 }
 order by asc (?distance)
+[QueryItem="name"]
+PREFIX : <http://www.example.org/bikeOntology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+select *
+where {
+
+?f :name ?g .
+}
