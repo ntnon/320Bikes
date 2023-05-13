@@ -35,31 +35,34 @@ PREFIX : <http://www.example.org/bikeOntology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 
-select ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon ?class ?vehicle_type ?disabled ?reserved
+select distinct ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon ?class ?vehicle_type
 where {
 ?x :hasLongitude ?lon .
 ?x :hasLatitude ?lat .
 ?x :vehicleType ?vehicle_type .
 ?x a ?class .
-{
-?class 
-}
-
-filter ( 
-?class in (:Vehicle, :Hub))
+	{?x a :Vehicle .
+	?x :isReserved ?reserved .
+	?x :isDisabled ?disabled .
+	filter (?reserved = 0 && ?disabled = 0) }
+	union 
+	{?x a :Hub}
 }
 order by asc (?distance)
+limit 10
 [QueryItem="tempquery"]
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
 PREFIX : <http://www.example.org/bikeOntology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 
-select ?x
+select distinct ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon 
 where {
-?x a :Company .
+?x :hasLongitude ?lon .
+?x :hasLatitude ?lat .
+?x :isDisabled
+filter (?reserved = 0)
 }
+order by asc (?distance)
 [QueryItem="Closest Hub"]
 PREFIX : <http://www.example.org/bikeOntology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -83,3 +86,42 @@ where {
 
 ?f :name ?g .
 }
+[QueryItem="Closest from each company"]
+PREFIX : <http://www.example.org/bikeOntology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+
+select distinct ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon ?class ?vehicle_type
+where {
+?x :hasLongitude ?lon .
+?x :hasLatitude ?lat .
+?x :vehicleType ?vehicle_type .
+?x a ?class .
+	{?x a :Vehicle .
+	?x :isReserved ?reserved .
+	?x :isDisabled ?disabled .
+	filter (?reserved = 0 && ?disabled = 0) }
+	union 
+	{?x a :Hub}
+}
+order by asc (?distance)
+limit 10
+[QueryItem="Closest Vehicle or Hub"]
+PREFIX : <http://www.example.org/bikeOntology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+
+select distinct ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon ?class ?vehicle_type
+where {
+?x :hasLongitude ?lon .
+?x :hasLatitude ?lat .
+?x :vehicleType ?vehicle_type .
+?x a ?class .
+	{?x a :Vehicle .
+	?x :isReserved ?reserved .
+	?x :isDisabled ?disabled .
+	filter (?reserved = 0 && ?disabled = 0) }
+	union 
+	{?x a :Hub}
+}
+order by asc (?distance)
