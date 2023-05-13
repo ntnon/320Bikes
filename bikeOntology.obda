@@ -36,10 +36,6 @@ mappingId	donkey2
 target		:hub/donkey_2/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :hasLongitude {lon} ; :hasLatitude {lat} ; :bikesAvailable {num_bikes_available} ; :ownedBy :company/{company} ; :vehicleType {vehicle_type} . 
 source		select * from donkey_2
 
-mappingId	donkey1
-target		:hub/donkey_1/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {geopunt} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :vehicleType {vehicle_type} ; :ownedBy :company/{company} . 
-source		select * from donkey_1
-
 mappingId	dott1
 target		:hub/dott_1/{station_id} a :Hub ; :hasAddress {name} ; :geopoint {loc} ; :hasLatitude {lat} ; :hasLongitude {lon} ; :vehicleType {vehicle_type} ; :ownedBy :company/{company} . 
 source		select * from dott_1
