@@ -74,14 +74,6 @@
     
 
 
-    <!-- http://www.example.org/bikeOntology#full_name -->
-
-    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#full_name">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.example.org/bikeOntology#geopoint -->
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#geopoint">
@@ -116,11 +108,9 @@
     
 
 
-    <!-- http://www.example.org/bikeOntology#isAvailable -->
+    <!-- http://www.example.org/bikeOntology#isDisabled -->
 
-    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#isAvailable">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#isDisabled"/>
     
 
 
@@ -132,41 +122,9 @@
     
 
 
-    <!-- http://www.example.org/bikeOntology#lastSeen -->
-
-    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#lastSeen">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.example.org/bikeOntology#link -->
-
-    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#link">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.example.org/bikeOntology#maxCapacity -->
-
-    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#maxCapacity">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://www.example.org/bikeOntology#name -->
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#name">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.example.org/bikeOntology#table_name -->
-
-    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#table_name">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     

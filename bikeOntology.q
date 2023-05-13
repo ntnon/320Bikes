@@ -39,8 +39,14 @@ select ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon
 where {
 ?h :hasLongitude ?lon .
 ?h :hasLatitude ?lat .
+
 ?h a ?type .
-filter (?type in (:ElectricCargoBike, :ElectricBike )).
+?h :isDisabled ?disabled .
+?h :isReserved ?reserved .
+filter (
+?type in (:ElectricCargoBike, :ElectricBike) &&
+?reserved = 0 &&
+?disabled = 0).
 }
 order by asc (?distance)
 limit 10
