@@ -122,9 +122,25 @@
     
 
 
+    <!-- http://www.example.org/bikeOntology#maxCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#maxCapacity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.example.org/bikeOntology#name -->
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#table_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#table_name">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -211,6 +227,7 @@
     <!-- http://www.example.org/bikeOntology#company/Dott -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Dott">
+        <rdf:type rdf:resource="http://www.example.org/bikeOntology#Company"/>
         <name>Dott</name>
     </owl:NamedIndividual>
     
@@ -219,6 +236,7 @@
     <!-- http://www.example.org/bikeOntology#company/Blue%20Bike -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Blue%20Bike">
+        <rdf:type rdf:resource="http://www.example.org/bikeOntology#Company"/>
         <name>Blue Bike</name>
     </owl:NamedIndividual>
     
@@ -227,6 +245,7 @@
     <!-- http://www.example.org/bikeOntology#company/Donkey%20Republic -->
 
     <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Donkey%20Republic">
+        <rdf:type rdf:resource="http://www.example.org/bikeOntology#Company"/>
         <name>Donkey Republic</name>
     </owl:NamedIndividual>
     

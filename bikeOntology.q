@@ -35,21 +35,20 @@ PREFIX : <http://www.example.org/bikeOntology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 
-select ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon
+select ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon ?class ?vehicle_type ?disabled ?reserved
 where {
-?h :hasLongitude ?lon .
-?h :hasLatitude ?lat .
+?x :hasLongitude ?lon .
+?x :hasLatitude ?lat .
+?x :vehicleType ?vehicle_type .
+?x a ?class .
+{
+?class 
+}
 
-?h a ?type .
-?h :isDisabled ?disabled .
-?h :isReserved ?reserved .
-filter (
-?type in (:ElectricCargoBike, :ElectricBike) &&
-?reserved = 0 &&
-?disabled = 0).
+filter ( 
+?class in (:Vehicle, :Hub))
 }
 order by asc (?distance)
-limit 10
 [QueryItem="tempquery"]
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -57,9 +56,9 @@ PREFIX : <http://www.example.org/bikeOntology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 
-select ?h
+select ?x
 where {
-?h a ?type .
+?x a :Company .
 }
 [QueryItem="Closest Hub"]
 PREFIX : <http://www.example.org/bikeOntology#>
