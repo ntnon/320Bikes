@@ -65,6 +65,7 @@ where {
 ?h :hasLongitude ?lon .
 ?h :hasLatitude ?lat .
 ?h a :Hub .
+?h :ownedBy ?c .
 ?c :name ?cname .
 }
 order by asc (?distance)
