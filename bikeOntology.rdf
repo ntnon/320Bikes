@@ -134,6 +134,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#name">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -242,11 +243,11 @@
     
 
 
-    <!-- http://www.example.org/bikeOntology#company/Blue%20Bike -->
+    <!-- http://www.example.org/bikeOntology#company/Blue%20Bikes -->
 
-    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Blue%20Bike">
+    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Blue%20Bikes">
         <rdf:type rdf:resource="http://www.example.org/bikeOntology#Company"/>
-        <name>Blue Bike</name>
+        <name>Blue Bikes</name>
     </owl:NamedIndividual>
     
 
