@@ -166,12 +166,14 @@ where {
 ?x a ?class .
 ?x :ownedBy ?c .
 ?c :name ?name .
-    {?x a :Vehicle .
+    {
+    ?x a :Vehicle .
     ?x :isReserved ?reserved .
     ?x :isDisabled ?disabled .
-    filter (?reserved = 0 && ?disabled = 0) }
+    filter (?reserved = 0 && ?disabled = 0 )}
     union 
     {?x a :Hub}
+filter (?class = :Hub || ?class = :Vehicle )
 }
 order by asc (?distance)
 limit 10
