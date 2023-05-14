@@ -10,3 +10,6 @@ bikeOntology.q contains saved SPARQL queries used for testing.
 
 bikeOntology.properties contains the connection parametres to the database server.
 
+public.sql contains a dumb of the SQL schema.
+
+rows.sql contains a dump of the rows in the SQL database.
