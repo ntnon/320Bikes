@@ -1,0 +1,479 @@
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix : <http://www.example.org/bikeOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obda: <https://w3id.org/obda/vocabulary#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<urn:baqme1> a rr:TriplesMap;
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Hub;
+      rr:template "http://www.example.org/bikeOntology#hub/baqme_1/{station_id}";
+      rr:termType rr:IRI
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:predicate :ownedBy;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:IRI;
+          rr:template "http://www.example.org/bikeOntology#company/{company}"
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:Literal;
+          rr:column "vehicle_type"
+        ];
+      rr:predicate :vehicleType
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasAddress;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "name"
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "lon"
+        ];
+      rr:predicate :hasLongitude
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "lat";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasLatitude
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "geopunt";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :geopoint
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :bikesAvailable;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "num_bikes_available";
+          rr:termType rr:Literal
+        ]
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from baqme_1"
+    ] .
+
+<urn:blue1> a rr:TriplesMap;
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:Literal;
+          rr:column "vehicle_type"
+        ];
+      rr:predicate :vehicleType
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :bikesAvailable;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "bikes_available";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:IRI;
+          rr:template "http://www.example.org/bikeOntology#company/{company}"
+        ];
+      rr:predicate :ownedBy
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLatitude;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "latitude";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLongitude;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "longitude"
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "geopoint"
+        ];
+      rr:predicate :geopoint
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasAddress;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "name"
+        ]
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from blue_1"
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Hub;
+      rr:termType rr:IRI;
+      rr:template "http://www.example.org/bikeOntology#hub/blue_1/{id}"
+    ] .
+
+<urn:blue2> a rr:TriplesMap;
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:predicate :ownedBy;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://www.example.org/bikeOntology#company/{company}";
+          rr:termType rr:IRI
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:Literal;
+          rr:column "vehicle_type"
+        ];
+      rr:predicate :vehicleType
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "longitude"
+        ];
+      rr:predicate :hasLongitude
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:Literal;
+          rr:column "bikes_available"
+        ];
+      rr:predicate :bikesAvailable
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "latitude";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasLatitude
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasAddress
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "geopoint"
+        ];
+      rr:predicate :geopoint
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from blue_2"
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Hub;
+      rr:termType rr:IRI;
+      rr:template "http://www.example.org/bikeOntology#hub/blue_2/{id}"
+    ] .
+
+<urn:blue3> a rr:TriplesMap;
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://www.example.org/bikeOntology#company/{company}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :ownedBy
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLatitude;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "latitude";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "longitude";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasLongitude
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :bikesAvailable;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:Literal;
+          rr:column "bikes_available"
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "geopoint"
+        ];
+      rr:predicate :geopoint
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasAddress;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "name";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :vehicleType;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "vehicle_type";
+          rr:termType rr:Literal
+        ]
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from blue_3"
+    ];
+  rr:subjectMap [ a rr:TermMap, rr:SubjectMap;
+      rr:template "http://www.example.org/bikeOntology#hub/blue_3/{id}";
+      rr:termType rr:IRI;
+      rr:class :Hub
+    ] .
+
+<urn:blue4> a rr:TriplesMap;
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasAddress
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :vehicleType;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "vehicle_type";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:IRI;
+          rr:template "http://www.example.org/bikeOntology#company/{company}"
+        ];
+      rr:predicate :ownedBy
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :bikesAvailable;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "bikes_available";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "longitude"
+        ];
+      rr:predicate :hasLongitude
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLatitude;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "latitude";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "geopoint"
+        ];
+      rr:predicate :geopoint
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from blue_4"
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:template "http://www.example.org/bikeOntology#hub/blue_4/{id}";
+      rr:termType rr:IRI;
+      rr:class :Hub
+    ] .
+
+<urn:donkey2> a rr:TriplesMap;
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from donkey_2"
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "geopunt"
+        ];
+      rr:predicate :geopoint
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLongitude;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "lon";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLatitude;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "lat"
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "name";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :hasAddress
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:IRI;
+          rr:template "http://www.example.org/bikeOntology#company/{company}"
+        ];
+      rr:predicate :ownedBy
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :vehicleType;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "vehicle_type";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "num_bikes_available"
+        ];
+      rr:predicate :bikesAvailable
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:termType rr:IRI;
+      rr:template "http://www.example.org/bikeOntology#hub/donkey_2/{station_id}";
+      rr:class :Hub
+    ] .
+
+<urn:dott1> a rr:TriplesMap;
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "vehicle_type";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :vehicleType
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLongitude;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "lon";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:IRI;
+          rr:template "http://www.example.org/bikeOntology#company/{company}"
+        ];
+      rr:predicate :ownedBy
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "name"
+        ];
+      rr:predicate :hasAddress
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :geopoint;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "loc";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLatitude;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "lat"
+        ]
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from dott_1"
+    ];
+  rr:subjectMap [ a rr:SubjectMap, rr:TermMap;
+      rr:class :Hub;
+      rr:termType rr:IRI;
+      rr:template "http://www.example.org/bikeOntology#hub/dott_1/{station_id}"
+    ] .
+
+<urn:baqme_bikes> a rr:TriplesMap;
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "lat"
+        ];
+      rr:predicate :hasLatitude
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:termType rr:Literal;
+          rr:column "geopoint"
+        ];
+      rr:predicate :geopoint
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLongitude;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "lon"
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :isDisabled;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "is_disabled";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :vehicleType;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "vehicle_type";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :isReserved;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "is_reserved"
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:IRI;
+          rr:template "http://www.example.org/bikeOntology#company/{company}"
+        ];
+      rr:predicate :ownedBy
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from baqme_bikes"
+    ];
+  rr:subjectMap [ a rr:TermMap, rr:SubjectMap;
+      rr:class :ElectricCargoBike;
+      rr:template "http://www.example.org/bikeOntology#vehicle/baqme_bikes/{bike_id}";
+      rr:termType rr:IRI
+    ] .
+
+<urn:dott_bikes> a rr:TriplesMap;
+  rr:subjectMap [ a rr:TermMap, rr:SubjectMap;
+      rr:template "http://www.example.org/bikeOntology#vehicle/dott_bikes/{bike_id}";
+      rr:class :ElectricBike;
+      rr:termType rr:IRI
+    ];
+  rr:predicateObjectMap [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "vehicle_type";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :vehicleType
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:template "http://www.example.org/bikeOntology#company/{company}";
+          rr:termType rr:IRI
+        ];
+      rr:predicate :ownedBy
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :isDisabled;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "is_disabled";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :hasLongitude;
+      rr:objectMap [ a rr:TermMap, rr:ObjectMap;
+          rr:column "lon";
+          rr:termType rr:Literal
+        ]
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "is_reserved";
+          rr:termType rr:Literal
+        ];
+      rr:predicate :isReserved
+    ], [ a rr:PredicateObjectMap;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:termType rr:Literal;
+          rr:column "lat"
+        ];
+      rr:predicate :hasLatitude
+    ], [ a rr:PredicateObjectMap;
+      rr:predicate :geopoint;
+      rr:objectMap [ a rr:ObjectMap, rr:TermMap;
+          rr:column "loc";
+          rr:termType rr:Literal
+        ]
+    ];
+  rr:logicalTable [ a rr:R2RMLView;
+      rr:sqlQuery "select * from dott_bikes"
+    ] .
