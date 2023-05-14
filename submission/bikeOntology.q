@@ -122,18 +122,22 @@ PREFIX : <http://www.example.org/bikeOntology#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 
-select distinct ( abs(3.691 - ?lon) + abs(51.02 - ?lat) as ?distance) ?lat ?lon ?class ?vehicle_type
+select distinct ( abs(3.7136848 - ?lon) + abs(51.0567498 - ?lat) as ?distance) ?x ?lat ?lon ?class ?vt ?name
 where {
 ?x :hasLongitude ?lon .
 ?x :hasLatitude ?lat .
-?x :vehicleType ?vehicle_type .
+?x :vehicleType ?vt .
 ?x a ?class .
-	{?x a :Vehicle .
-	?x :isReserved ?reserved .
-	?x :isDisabled ?disabled .
-	filter (?reserved = 0 && ?disabled = 0) }
-	union 
-	{?x a :Hub}
+?x :ownedBy ?c .
+?c :name ?name .
+    {
+    ?x a :Vehicle .
+    ?x :isReserved ?reserved .
+    ?x :isDisabled ?disabled .
+    filter (?reserved = 0 && ?disabled = 0 )}
+    union 
+    {?x a :Hub}
+filter (?class = :Hub || ?class = :Vehicle )
 }
 order by asc (?distance)
 limit 10
