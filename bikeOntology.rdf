@@ -74,6 +74,14 @@
     
 
 
+    <!-- http://www.example.org/bikeOntology#full_name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#full_name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.example.org/bikeOntology#geopoint -->
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#geopoint">
@@ -94,7 +102,6 @@
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#hasLatitude">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
@@ -103,20 +110,37 @@
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#hasLongitude">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.example.org/bikeOntology#isDisabled -->
+    <!-- http://www.example.org/bikeOntology#isAvailable -->
 
-    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#isDisabled"/>
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#isAvailable">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
     
 
 
     <!-- http://www.example.org/bikeOntology#isReserved -->
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#isReserved">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#lastSeen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#lastSeen">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#link -->
+
+    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#link">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
     
@@ -134,7 +158,6 @@
 
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#name">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -144,12 +167,6 @@
     <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#table_name">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
     </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.example.org/bikeOntology#vehicleType -->
-
-    <owl:DatatypeProperty rdf:about="http://www.example.org/bikeOntology#vehicleType"/>
     
 
 
@@ -175,6 +192,12 @@
     <!-- http://www.example.org/bikeOntology#Company -->
 
     <owl:Class rdf:about="http://www.example.org/bikeOntology#Company"/>
+    
+
+
+    <!-- http://www.example.org/bikeOntology#DataSource -->
+
+    <owl:Class rdf:about="http://www.example.org/bikeOntology#DataSource"/>
     
 
 
@@ -217,53 +240,6 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.example.org/bikeOntology#company/Baqme -->
-
-    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Baqme">
-        <rdf:type rdf:resource="http://www.example.org/bikeOntology#Company"/>
-        <name>Baqme</name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.example.org/bikeOntology#company/Dott -->
-
-    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Dott">
-        <rdf:type rdf:resource="http://www.example.org/bikeOntology#Company"/>
-        <name>Dott</name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.example.org/bikeOntology#company/Blue%20Bikes -->
-
-    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Blue%20Bikes">
-        <rdf:type rdf:resource="http://www.example.org/bikeOntology#Company"/>
-        <name>Blue Bikes</name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.example.org/bikeOntology#company/Donkey%20Republic -->
-
-    <owl:NamedIndividual rdf:about="http://www.example.org/bikeOntology#company/Donkey%20Republic">
-        <rdf:type rdf:resource="http://www.example.org/bikeOntology#Company"/>
-        <name>Donkey Republic</name>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
     // General axioms
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -282,5 +258,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

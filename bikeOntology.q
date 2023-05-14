@@ -41,12 +41,10 @@ where {
 ?x :hasLatitude ?lat .
 ?x :vehicleType ?vehicle_type .
 ?x a ?class .
-	{?x a :Vehicle .
-	?x :isReserved ?reserved .
-	?x :isDisabled ?disabled .
-	filter (?reserved = 0 && ?disabled = 0) }
-	union 
-	{?x a :Hub}
+?x a :Vehicle .
+?x :isReserved ?reserved .
+?x :isDisabled ?disabled .
+filter (?reserved = 0 && ?disabled = 0 && ?class = :ElectricBike || ?class = :ElectricCargoBike ) 
 }
 order by asc (?distance)
 limit 10
