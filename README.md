@@ -5,3 +5,6 @@ The objective and main challange was to create a queryable virtual knowledgegrap
 
 # DEMO
 https://youtu.be/ayxOU1iA8_E
+
+# The name
+the course was INFO320 and our domain was bikes - 320Bikes
